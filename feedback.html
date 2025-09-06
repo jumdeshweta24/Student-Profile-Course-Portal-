@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Feedback</title>
+</head>
+<body>
+  <header>
+    <h1>Submit Feedback</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="grades.html">Grades</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p>We value your feedback! Please fill out the form below to help us improve our student portal.</p>
+
+    <form>
+      <!-- Name -->
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+      <!-- Email -->
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+      <!-- Course -->
+      <label for="course">Select Course:</label><br>
+      <select id="course" name="course">
+        <option value="web">Web Development</option>
+        <option value="dbms">Database Management</option>
+        <option value="programming">Programming Fundamentals</option>
+        <option value="other">Other</option>
+      </select><br><br>
+
+      <!-- Rating -->
+      <label>Rate Your Experience:</label><br>
+      <input type="radio" id="excellent" name="rating" value="Excellent">
+      <label for="excellent">Excellent</label><br>
+      <input type="radio" id="good" name="rating" value="Good">
+      <label for="good">Good</label><br>
+      <input type="radio" id="average" name="rating" value="Average">
+      <label for="average">Average</label><br>
+      <input type="radio" id="poor" name="rating" value="Poor">
+      <label for="poor">Poor</label><br><br>
+
+      <!-- Checkbox -->
+      <label>What did you like about the portal? (Check all that apply):</label><br>
+      <input type="checkbox" id="profile" name="features" value="Profile Page">
+      <label for="profile">Profile Page</label><br>
+      <input type="checkbox" id="courses" name="features" value="Courses Page">
+      <label for="courses">Courses Page</label><br>
+      <input type="checkbox" id="grades" name="features" value="Grades Table">
+      <label for="grades">Grades Table</label><br>
+      <input type="checkbox" id="feedback" name="features" value="Feedback Form">
+      <label for="feedback">Feedback Form</label><br><br>
+
+      <!-- Feedback message -->
+      <label for="message">Your Feedback:</label><br>
+      <textarea id="message" name="message" rows="5" cols="50" placeholder="Write your feedback here..."></textarea><br><br>
+
+      <!-- Submit button -->
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </main>
+</body>
+</html>
