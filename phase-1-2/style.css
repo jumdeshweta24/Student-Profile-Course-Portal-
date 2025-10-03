@@ -1,0 +1,402 @@
+/* =========================
+   Global Reset & Base Styles
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.7;
+  color: #1f2937;
+  background: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media-friendly assets */
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 0.5rem;
+}
+
+/* =========================
+     Typography
+     ========================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+  color: #111827;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 0.75rem;
+}
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 1.25rem 0 0.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+  margin: 0.75rem 0 0.5rem;
+}
+h5 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+h6 {
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+/* =========================
+     Layout
+     ========================= */
+header {
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+header h1 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  font-weight: 800;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0.5rem auto;
+  padding: 0 1.5rem 0.75rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #111827;
+  background: #f3f4f6;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease;
+}
+nav a:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+}
+nav a[aria-current="page"] {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  flex: 1 0 auto;
+}
+
+footer {
+  background: #111827;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #1f2937;
+}
+
+/* =========================
+     Links
+     ========================= */
+a {
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* =========================
+     Profile Page
+     ========================= */
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #e5e7eb;
+  object-fit: cover;
+  margin: 1rem auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Definition list grid */
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0.5rem 1rem;
+}
+dt {
+  font-weight: 600;
+  color: #111;
+}
+dd {
+  color: #374151;
+}
+
+/* =========================
+     Cards (Courses / Forms)
+     ========================= */
+.course-card,
+.form-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  padding: 1.25rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.course-card:hover,
+.form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.course-card {
+  flex: 1 1 calc(33.333% - 1.25rem);
+  min-width: 260px;
+}
+
+/* =========================
+     Forms
+     ========================= */
+.form-card label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #111;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.form-card button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.form-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+/* =========================
+     Tables (Grades)
+     ========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+th,
+td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+thead th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #111827;
+}
+tbody tr:hover {
+  background: #eff6ff;
+  transition: background 0.25s ease;
+}
+
+/* Feedback form container */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Form heading (if any <h2>/<h3> inside form) */
+form h2,
+form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Inputs, textarea, select */
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Textarea */
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Submit button */
+form input[type="submit"],
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form button:hover {
+  background: #357ab7;
+}
+
+/* =========================
+     Responsive
+     ========================= */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .course-card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  .course-card {
+    flex-basis: 100%;
+  }
+}

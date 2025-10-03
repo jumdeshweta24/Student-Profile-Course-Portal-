@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Profile &amp; Course Portal — Feedback</title>
+  <meta name="description" content="Share your feedback">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="grades.html">Grades</a></li>
+        <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section>
+      <h2>Feedback</h2>
+      <form>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name"><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com"><br><br>
+
+        <label for="type">Feedback Type:</label><br>
+        <select id="type" name="type">
+          <option>General</option>
+          <option>Course Related</option>
+          <option>Technical Issue</option>
+          <option>Other</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your feedback here..."></textarea><br><br>
+
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Profile &amp; Course Portal</p>
+  </footer>
+</body>
+</html>

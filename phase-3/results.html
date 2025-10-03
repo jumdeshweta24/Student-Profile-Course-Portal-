@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Results • Interactive Quiz Master</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="results">
+    <header class="header container">
+      <a class="brand" href="./index.html">
+        <span class="brand-logo" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M4 12c0-4.418 3.582-8 8-8v0c4.418 0 8 3.582 8 8v0"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M6 16c0-3.314 2.686-6 6-6v0c3.314 0 6 2.686 6 6v0"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </span>
+        <strong class="brand-title">Interactive Quiz Master</strong>
+      </a>
+      <nav>
+        <a class="button secondary" href="./index.html">Home</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <div class="hero" style="gap: 22px">
+          <h1>Results</h1>
+          <p id="finalScore">Loading your results…</p>
+          <div class="actions">
+            <button id="restartBtn" class="button" type="button">
+              Restart Quiz
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      Great effort! Try again to beat your score.
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
